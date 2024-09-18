@@ -1,25 +1,23 @@
-# Adventure World: Create Your Own Game!
+# 🍔 Burger Builder Java Project
 
-For your next programming exercise, you are going to build a simple game application in Java that focuses on object-oriented design. You will model key components such as the player, scoring system, and enemy interactions, enhancing your understanding of Java classes.
+For this exercise, you'll practice designing Java classes that represent various burger elements. This task will enhance your understanding of object-oriented concepts through modeling, encapsulation, and scope management.
 
 ### 💀 Deadline
 
-This assignment must be completed before the start of the next session on **Friday 10th November**.
+Complete this assignment before the exercise session on **Friday, November 24th**.
 
 ### 👩‍🏫 Instructions
 
-For detailed instructions on how to complete and submit the assignment, refer to [this section of the course guide](https://example.com/course-guide#assignments).
+For submission details, refer to the [assignment section of the course instructions](https://gits-15.sys.kth.se/inda-22/course-instructions#assignments).
 
 ### 📝 Preparation
 
-To be ready for this task, ensure you have read and completed the exercises from Module 3 of the OLI materials:
-
-- Read [Object-Oriented Programming Concepts](https://example.com/oli/module3).
-- Register for the course using the key `java-2023` if you haven't already.
+- Review [Classes and Objects in Java](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html).
+- Sign up and explore resources on [Oracle Learning Platform](https://education.oracle.com).
 
 ### ✅ Learning Goals
 
-By completing this assignment, you will practice:
+This week's learning focuses on:
 
 - Designing Java classes
 - Adding instance fields
@@ -27,175 +25,161 @@ By completing this assignment, you will practice:
 - Creating *getters* and *setters*
 - Printing to the terminal
 - Using the `main` method
-- Understanding scope and *variable shadowing*
+- Understanding scope and variable shadowing
 
 ### 🚨 Troubleshooting Guide
 
-If you encounter any issues, follow these steps:
+1. Check this week's [posted issues](https://gits-15.sys.kth.se/inda-22/help/issues). 
+2. Post a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new) if needed.
+3. Consult a TA during [weekly lab sessions](https://queue.csc.kth.se/Queue/INDA).
 
-1. Check the [issues and solutions](https://example.com/help/issues) for common problems.
-2. Post your question as a [New Issue](https://example.com/help/issues/new) if it hasn't been addressed.
-3. Ask a TA during the weekly lab session ([see schedule](https://example.com/schedule)).
-
-Collaborate with your peers, but **do not share solutions**.
+Discuss with peers, but **do not share solutions**!
 
 ### 🏛 Assignment
 
-You're tasked with creating a Java game featuring player movement, scoring, and enemy interactions. Follow the steps below to achieve this:
+Welcome to the world of fast food innovation! Your task is to design Java classes to represent a typical burger. You'll incorporate class design principles while including essential elements like instance fields, constructors, and encapsulation with getters and setters.
 
-#### Exercise 1 -- Fields
+#### Exercise 1.0 -- Fields
 
-In the `src` directory, create a class called `Player`. It should contain:
+In the `src` directory, create a `Burger.java` class. Model the burger with these fields:
 
 - `String` name
-- `int` score
-- `int` xPosition
-- `int` yPosition
+- `String` bunType
+- `int` patties
+- `boolean` hasCheese
+- `boolean` hasBacon
 
-Your main method should compile if structured as follows:
+If done correctly, Example 1 should compile with `Burger.java`.
 
 <details>
   <summary> 🛠 Example 1 </summary>
 
   ```java
-  class Player {
-
-    // Add your fields
+  class Burger {
+    
+    // Place your fields here!
 
     public static void main(String[] args) {
-      Player hero = new Player();
+      Burger classic = new Burger();
       
-      // Assign values
-      hero.name = "Hero";
-      hero.score = 0;
-      hero.xPosition = 0;
-      hero.yPosition = 0;
-
-      System.out.println("Player: " + hero.name);
-      System.out.println("Score: " + hero.score);
-      System.out.println("Position: (" + hero.xPosition + ", " + hero.yPosition + ")");
+      classic.name = "Classic Burger";
+      classic.bunType = "Sesame Seed";
+      classic.patties = 2;
+      classic.hasCheese = true;
+      classic.hasBacon = false;
+      
+      System.out.println("Name: " + classic.name);
+      System.out.println("Bun Type: " + classic.bunType);
+      System.out.println("No. of Patties: " + classic.patties);
+      System.out.println("Has Cheese: " + classic.hasCheese);
+      System.out.println("Has Bacon: " + classic.hasBacon);
     }
-
   }
   ```
 </details>
 
-#### Exercise 2 -- Getters and Setters
+#### Exercise 1.1 -- Getters and Setters
 
-Implement encapsulation for `Player` by making its fields `private` and providing *getters* and *setters*. Your main method should reflect the following changes:
+Encapsulation allows controlled access to fields. Implement private fields in `Burger` and provide corresponding getters and setters. This results in ten methods, making Example 2 compile successfully.
 
 <details>
   <summary> 🛠 Example 2 </summary>
 
   ```java
-  class Player {
+  class Burger {
 
-    // Private fields and corresponding getters and setters
-    
+    // Define private fields here!
+
+    // Implement getters and setters here!
+
     public static void main(String[] args) {
-      Player hero = new Player();
+      Burger classic = new Burger();
       
-      hero.setName("Hero");
-      hero.setScore(0);
-      hero.setXPosition(0);
-      hero.setYPosition(0);
-
-      System.out.println("Player: " + hero.getName());
-      System.out.println("Score: " + hero.getScore());
-      System.out.println("Position: (" + hero.getXPosition() + ", " + hero.getYPosition() + ")");
+      classic.setName("Classic Burger");
+      classic.setBunType("Sesame Seed");
+      classic.setPatties(2);
+      classic.setHasCheese(true);
+      classic.setHasBacon(false);
+      
+      System.out.println("Name: " + classic.getName());
+      System.out.println("Bun Type: " + classic.getBunType());
+      System.out.println("No. of Patties: " + classic.getPatties());
+      System.out.println("Has Cheese: " + classic.isHasCheese());
+      System.out.println("Has Bacon: " + classic.isHasBacon());
     }
-
   }
   ```
 </details>
 
-#### Exercise 3 -- Constructor
+> **Note:** Boolean getters use `is` instead of `get`.
 
-Add a constructor to the `Player` class to initialize its fields upon creation:
+#### Exercise 1.2 -- Constructor
+
+Revise using a constructor to simplify object creation. Incorporate a constructor to overcome the verbosity seen in Example 2.
+
+#### Exercise 1.3 -- Printing with `printDetails()`
+
+Implement a `printDetails()` method to output burger details to the terminal.
 
 <details>
   <summary> 🛠 Example 3 </summary>
 
   ```java
   public static void main(String[] args) {
-    Player hero = new Player("Hero", 0, 0, 0);
-    
-    hero.printInfo();
+    Burger classic = new Burger("Classic Burger", "Sesame Seed", 2, true, false);
+
+    classic.printDetails();
   }
   ```
-</details>
 
-#### Exercise 4 -- Print Info
-
-Create a method `printInfo()` to display the player's details on the terminal:
-
-<details>
-  <summary> 🛠 Example 4 </summary>
-
-  ```java
-  Player hero = new Player("Hero", 0, 0, 0);
-  hero.printInfo();
-  ```
+  Expected terminal output:
 
   ```
-  > Player: Hero
-  > Score: 0
-  > Position: (0, 0)
+  > INFO
+  > Burger: Classic Burger
+  > Bun Type: Sesame Seed
+  > Patties: 2
+  > Cheese: Yes
+  > Bacon: No
   ```
 </details>
 
-#### Exercise 5 -- Enemy Interaction
+#### Exercise 1.4 -- Variable Shadowing
 
-Model the enemy with an `Enemy` class and implement a method `interact()` in `Player` that affects the player's score:
+Explore variable shadowing by examining the following examples. Prepare to explain this in class.
 
-<details>
-  <summary> 🛠 Example 5 </summary>
-
-  ```java
-  Player hero = new Player("Hero", 0, 0, 0);
-  Enemy goblin = new Enemy("Goblin", 5);
-
-  hero.interact(goblin);
-  ```
-
-  ```
-  > Player Hero encountered Goblin!
-  > Hero's new score: 5
-  ```
-</details>
-
-#### Exercise 6 -- Variable Shadowing
-
-Understand *variable shadowing* by examining the examples below. Be prepared to discuss fixes in class:
-
-```Java
+Example 1:
+```java
 public class ShadowExample1 {
-  private int score = 100;
+    private double price = 10.5;
 
-  public void adjustScore() {
-    int score = 50;
-    System.out.println(score); // Outputs 50 instead of 100
+    public void showPrice() {
+        double price = 7.0;
+        System.out.println(price); // Why isn't this 10.5?
+    }
+
+    public static void main(String[] args) {
+        new ShadowExample1().showPrice();
+    }
+}
+```
+
+Example 2:
+```java
+public class Restaurant {
+  private String ownerName;
+  private String restaurantName;
+
+  public Restaurant(String ownerName, String restaurantName) {
+    ownerName = ownerName; // Resolve this conflict
+    restaurantName = restaurantName;
   }
 
-  public static void main(String[] args){
-    new ShadowExample1().adjustScore();
+  public void greet() {
+    String name = "Visitor";
+    System.out.println(name + ", welcome to " + restaurantName + "!"); // Why isn't the restaurant name printed?
   }
 }
 ```
 
-```Java
-public class Game {
-  private String playerName;
-
-  public Game(String playerName) {
-    playerName = playerName; // Incorrect assignment
-  }
-
-  public static void main(String[] args){
-    Game game = new Game("Warrior");
-    System.out.println("Player: " + game.playerName); // Expected output "Warrior"
-  }
-}
-```
-
-> **Assistant's Note:** Consider the scope of your variables and how the `this` keyword can resolve shadowing issues.
+Learning about local vs global scope and using `this` to address variable shadowing will be critical in understanding these examples.
