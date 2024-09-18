@@ -1,201 +1,195 @@
-# Adventure World: Create Your Own Game!
+# Mystic Beverages: Brew Your Java Code
 
-For your next programming exercise, you are going to build a simple game application in Java that focuses on object-oriented design. You will model key components such as the player, scoring system, and enemy interactions, enhancing your understanding of Java classes.
+For this exercise, you will harness your Java object-oriented skills to design a mystical beverage class. You'll practice fundamental Java concepts, such as encapsulation, constructor methods, and scope, while coding a fictional beverage system.
 
 ### 💀 Deadline
 
-This assignment must be completed before the start of the next session on **Friday 10th November**.
+This assignment is due on **Friday, October 28th**.
 
 ### 👩‍🏫 Instructions
 
-For detailed instructions on how to complete and submit the assignment, refer to [this section of the course guide](https://example.com/course-guide#assignments).
+Find complete assignment instructions and submission details in the [assignments section of the course instructions](https://gits-15.sys.kth.se/inda-22/course-instructions#assignments).
 
 ### 📝 Preparation
 
-To be ready for this task, ensure you have read and completed the exercises from Module 3 of the OLI materials:
+Please make sure you've completed the following preparatory tasks:
 
-- Read [Object-Oriented Programming Concepts](https://example.com/oli/module3).
-- Register for the course using the key `java-2023` if you haven't already.
+- Complete the readings and exercises in the [OLI Module 3: Understanding Object-Oriented Design](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=f5e5a808ac1f088812f2a8ce315bac60).
+- If you're not registered, go to https://kth.oli.cmu.edu/, sign up, and use the course key `dd1337-ht22`.
+
+> **Assistant's Note:** The OLI materials are critical to understanding this assignment's scope; review them thoroughly.
 
 ### ✅ Learning Goals
 
-By completing this assignment, you will practice:
+By the end of this task, you should be able to:
 
-- Designing Java classes
-- Adding instance fields
-- Adding a constructor method
-- Creating *getters* and *setters*
-- Printing to the terminal
-- Using the `main` method
-- Understanding scope and *variable shadowing*
+- Design Java classes using instance fields.
+- Implement constructor methods for class initialization.
+- Develop and use *getters* and *setters* for field encapsulation.
+- Output formatted information to the terminal.
+- Apply variable scope concepts to avoid shadowing.
+- Execute Java applications using the `main` method.
 
 ### 🚨 Troubleshooting Guide
 
-If you encounter any issues, follow these steps:
+If you encounter issues:
 
-1. Check the [issues and solutions](https://example.com/help/issues) for common problems.
-2. Post your question as a [New Issue](https://example.com/help/issues/new) if it hasn't been addressed.
-3. Ask a TA during the weekly lab session ([see schedule](https://example.com/schedule)).
+1. Check this week's [posted issues](https://gits-15.sys.kth.se/inda-22/help/issues) to see if others have faced similar problems.
+2. If not, create a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new) with a descriptive title beginning with "Task X: summary of the problem."
+3. Seek assistance in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule for lab timing.
 
-Collaborate with your peers, but **do not share solutions**.
+Discuss with peers but **do not share solutions**!
+
+---
 
 ### 🏛 Assignment
 
-You're tasked with creating a Java game featuring player movement, scoring, and enemy interactions. Follow the steps below to achieve this:
+Your task is to create a mystical beverage class, a BaseBeverage, detailing its unique properties and brewing potential. Enrich your Java skills by implementing several exercises outlined below.
 
-#### Exercise 1 -- Fields
+#### Exercise 1.0 -- Fields
 
-In the `src` directory, create a class called `Player`. It should contain:
+In the [`src`](src) folder, create a new class called `BaseBeverage.java`. Your class should have the following private fields:
 
-- `String` name
-- `int` score
-- `int` xPosition
-- `int` yPosition
+- `String name`
+- `int volume` (in milliliters)
+- `String flavorProfile`
+- `boolean isMagical`
 
-Your main method should compile if structured as follows:
+Ensure correct field initialization as shown in Example 1.
 
 <details>
   <summary> 🛠 Example 1 </summary>
 
   ```java
-  class Player {
+  class BaseBeverage {
 
-    // Add your fields
+    // Declare your fields here!
 
     public static void main(String[] args) {
-      Player hero = new Player();
-      
-      // Assign values
-      hero.name = "Hero";
-      hero.score = 0;
-      hero.xPosition = 0;
-      hero.yPosition = 0;
+      // create a new BaseBeverage object
+      BaseBeverage potion = new BaseBeverage();
 
-      System.out.println("Player: " + hero.name);
-      System.out.println("Score: " + hero.score);
-      System.out.println("Position: (" + hero.xPosition + ", " + hero.yPosition + ")");
-    }
+      // Assign the fields respective values
+      potion.name = "Elixir of Clarity";
+      potion.volume = 250;
+      potion.flavorProfile = "Crisp mint";
+      potion.isMagical = true;
 
-  }
+      // Print field values
+      System.out.println("Name: " + potion.name);
+      System.out.println("Volume: " + potion.volume);
+      System.out.println("Flavor Profile: " + potion.flavorProfile);
+      System.out.println("Is Magical: " + potion.isMagical);
+    } // end main method
+
+  } // end class
   ```
 </details>
 
-#### Exercise 2 -- Getters and Setters
+#### Exercise 1.1 -- Getters and Setters
 
-Implement encapsulation for `Player` by making its fields `private` and providing *getters* and *setters*. Your main method should reflect the following changes:
+Incorporate *getters* and *setters* for all fields to facilitate encapsulation. Apply access modifiers and demonstrate their use in a `main` method as seen in Example 2.
 
 <details>
   <summary> 🛠 Example 2 </summary>
 
   ```java
-  class Player {
+  class BaseBeverage {
 
-    // Private fields and corresponding getters and setters
+    // Declare private fields here!
     
+    // Implement getters and setters here!
+
     public static void main(String[] args) {
-      Player hero = new Player();
-      
-      hero.setName("Hero");
-      hero.setScore(0);
-      hero.setXPosition(0);
-      hero.setYPosition(0);
+      // create a new BaseBeverage object
+      BaseBeverage potion = new BaseBeverage();
 
-      System.out.println("Player: " + hero.getName());
-      System.out.println("Score: " + hero.getScore());
-      System.out.println("Position: (" + hero.getXPosition() + ", " + hero.getYPosition() + ")");
-    }
+      // Utilize setters
+      potion.setName("Elixir of Clarity");
+      potion.setVolume(250);
+      potion.setFlavorProfile("Crisp mint");
+      potion.setIsMagical(true);
 
-  }
+      // Utilize getters
+      System.out.println("Name: " + potion.getName());
+      System.out.println("Volume: " + potion.getVolume());
+      System.out.println("Flavor Profile: " + potion.getFlavorProfile());
+      System.out.println("Is Magical: " + potion.isMagical());
+    } // end main method
+
+  } // end class
   ```
 </details>
 
-#### Exercise 3 -- Constructor
+> **Assistant's Note:** For the boolean type field, follow the naming convention of `isMagical()` and `setIsMagical`.
 
-Add a constructor to the `Player` class to initialize its fields upon creation:
+#### Exercise 1.2 -- Constructor
+
+Streamline the creation of beverage objects by implementing a constructor, following the guidelines in the OLI material.
+
+#### Exercise 1.3 -- printInfo() Method
+
+Implement the `printInfo()` method to output all beverage data neatly, as demonstrated in Example 3.
 
 <details>
   <summary> 🛠 Example 3 </summary>
 
   ```java
   public static void main(String[] args) {
-    Player hero = new Player("Hero", 0, 0, 0);
-    
-    hero.printInfo();
+    // Use constructors when creating objects
+    BaseBeverage potion = new BaseBeverage("Elixir of Clarity", 250, "Crisp mint", true);
+
+    // Print beverage information
+    potion.printInfo();
   }
   ```
-</details>
 
-#### Exercise 4 -- Print Info
-
-Create a method `printInfo()` to display the player's details on the terminal:
-
-<details>
-  <summary> 🛠 Example 4 </summary>
-
-  ```java
-  Player hero = new Player("Hero", 0, 0, 0);
-  hero.printInfo();
+  Example output:
   ```
-
-  ```
-  > Player: Hero
-  > Score: 0
-  > Position: (0, 0)
+  > BEVERAGE INFO
+  > Name: Elixir of Clarity
+  > Volume: 250 ml
+  > Flavor Profile: Crisp mint
+  > Magical: true
   ```
 </details>
 
-#### Exercise 5 -- Enemy Interaction
+#### Exercise 1.4 -- Variable Shadowing
 
-Model the enemy with an `Enemy` class and implement a method `interact()` in `Player` that affects the player's score:
+The following examples illustrate variable shadowing. Analyze these to discuss and fix in class.
 
-<details>
-  <summary> 🛠 Example 5 </summary>
+Example 1:
+```java
+public class Brew {
+    private String name = "Mystic Brew"; // Should be printed
 
-  ```java
-  Player hero = new Player("Hero", 0, 0, 0);
-  Enemy goblin = new Enemy("Goblin", 5);
+    public void flavor() {
+        String name = "Shadow Brew";
+        System.out.println(name); // Incorrectly prints
+    }
 
-  hero.interact(goblin);
-  ```
+    public static void main(String[] args){
+        new Brew().flavor();
+    }
+}
+```
 
-  ```
-  > Player Hero encountered Goblin!
-  > Hero's new score: 5
-  ```
-</details>
+Example 2:
+```java
+public class Mystic {
+  private String type;
 
-#### Exercise 6 -- Variable Shadowing
-
-Understand *variable shadowing* by examining the examples below. Be prepared to discuss fixes in class:
-
-```Java
-public class ShadowExample1 {
-  private int score = 100;
-
-  public void adjustScore() {
-    int score = 50;
-    System.out.println(score); // Outputs 50 instead of 100
+  public Mystic(String type) {
+    type = type; // Issue here
   }
 
-  public static void main(String[] args){
-    new ShadowExample1().adjustScore();
+  public void conjure(){
+    String type = "Transient";
+    System.out.println(type + " conjured!"); // Incorrect output
   }
 }
 ```
 
-```Java
-public class Game {
-  private String playerName;
+> **Assistant's Note:** Consider *local scope*, *global variables*, and resolving with `this` keyword.
 
-  public Game(String playerName) {
-    playerName = playerName; // Incorrect assignment
-  }
-
-  public static void main(String[] args){
-    Game game = new Game("Warrior");
-    System.out.println("Player: " + game.playerName); // Expected output "Warrior"
-  }
-}
-```
-
-> **Assistant's Note:** Consider the scope of your variables and how the `this` keyword can resolve shadowing issues.
+---
