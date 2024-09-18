@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Player {
     private String name;
     private int score;
@@ -8,13 +6,13 @@ class Player {
 
     // Constructor to initialize fields
     public Player(String name, int score, int xPosition, int yPosition) {
-        // TODO: Implement initialization of fields.
+        // TODO: Implement this method.
     }
 
     // Getters and setters
     public String getName() {
         // TODO: Implement logic and return the appropriate value.
-        return null;
+        return null; // Placeholder return
     }
 
     public void setName(String name) {
@@ -23,7 +21,7 @@ class Player {
 
     public int getScore() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return
     }
 
     public void setScore(int score) {
@@ -32,7 +30,7 @@ class Player {
 
     public int getXPosition() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return
     }
 
     public void setXPosition(int xPosition) {
@@ -41,7 +39,7 @@ class Player {
 
     public int getYPosition() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return
     }
 
     public void setYPosition(int yPosition) {
@@ -63,7 +61,7 @@ class Player {
     }
 }
 
-// Assuming Enemy class exists for the 'interact' method to use.
+// Assume Enemy class is defined elsewhere.
 class Enemy {
-    // Placeholder for the Enemy class implementation.
+    // Placeholder for Enemy class definition
 }
