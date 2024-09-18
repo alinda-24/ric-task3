@@ -1,5 +1,6 @@
-import java.util.*;
+import java.util.Scanner; // Import statement (if necessary for interactions)
 
+// Class definition
 class Player {
     private String name;
     private int score;
@@ -8,13 +9,16 @@ class Player {
 
     // Constructor to initialize fields
     public Player(String name, int score, int xPosition, int yPosition) {
-        // TODO: Implement initialization of fields.
+        // TODO: Initialize the name field.
+        // TODO: Initialize the score field.
+        // TODO: Initialize the xPosition field.
+        // TODO: Initialize the yPosition field.
     }
 
     // Getters and setters
     public String getName() {
         // TODO: Implement logic and return the appropriate value.
-        return null;
+        return null; // Placeholder return statement
     }
 
     public void setName(String name) {
@@ -23,7 +27,7 @@ class Player {
 
     public int getScore() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return statement
     }
 
     public void setScore(int score) {
@@ -32,7 +36,7 @@ class Player {
 
     public int getXPosition() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return statement
     }
 
     public void setXPosition(int xPosition) {
@@ -41,7 +45,7 @@ class Player {
 
     public int getYPosition() {
         // TODO: Implement logic and return the appropriate value.
-        return 0;
+        return 0; // Placeholder return statement
     }
 
     public void setYPosition(int yPosition) {
@@ -50,20 +54,22 @@ class Player {
 
     // Method to print player's information
     public void printInfo() {
-        // TODO: Implement this method.
+        // TODO: Implement this method to print player's information.
     }
 
     // Method for interacting with an Enemy
     public void interact(Enemy enemy) {
-        // TODO: Implement this method.
+        // TODO: Implement interaction logic with an enemy.
     }
 
     public static void main(String[] args) {
-        // TODO: Implement this method.
+        // TODO: Create Player object(s) and interact with the game.
+        // TODO: Possibly interact with user input.
+        // TODO: Demonstrate usage of Player methods.
     }
 }
 
-// Assuming Enemy class exists for the 'interact' method to use.
+// Placeholder class for Enemy, to ensure the `interact` method compiles.
 class Enemy {
-    // Placeholder for the Enemy class implementation.
+    // TODO: Define fields and methods for Enemy class.
 }
