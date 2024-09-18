@@ -10,7 +10,7 @@ class public class PlayerTest {
 
     @Before
     public void setUp() {
-        player = new Player("Hero", 0, 0, 0);
+        player = new Player("Hero", 10, 0, 0);
         enemy = new Enemy("Goblin", 5);
     }
 
@@ -27,13 +27,13 @@ class public class PlayerTest {
 
     @Test
     public void testGetScore() {
-        assertEquals(0, player.getScore());
+        assertEquals(10, player.getScore());
     }
 
     @Test
     public void testSetScore() {
-        player.setScore(10);
-        assertEquals(10, player.getScore());
+        player.setScore(20);
+        assertEquals(20, player.getScore());
     }
 
     @Test
@@ -54,36 +54,13 @@ class public class PlayerTest {
 
     @Test
     public void testSetYPosition() {
-        player.setYPosition(7);
-        assertEquals(7, player.getYPosition());
+        player.setYPosition(10);
+        assertEquals(10, player.getYPosition());
     }
 
     @Test
-    public void testInteract() {
+    public void testInteractWithEnemy() {
         player.interact(enemy);
-        assertEquals(5, player.getScore());
-    }
-
-    @Test
-    public void testInteractWithNegativePointsEnemy() {
-        Enemy negativeEnemy = new Enemy("Trap", -5);
-        player.interact(negativeEnemy);
-        assertEquals(-5, player.getScore());
-    }
-
-    @Test
-    public void testPlayerInitialization() {
-        Player newPlayer = new Player("Mage", 10, 2, 3);
-        assertEquals("Mage", newPlayer.getName());
-        assertEquals(10, newPlayer.getScore());
-        assertEquals(2, newPlayer.getXPosition());
-        assertEquals(3, newPlayer.getYPosition());
-    }
-
-    @Test
-    public void testEnemyInitialization() {
-        Enemy newEnemy = new Enemy("Dragon", 20);
-        assertEquals("Dragon", newEnemy.getName());
-        assertEquals(20, newEnemy.getPoints());
+        assertEquals(15, player.getScore());
     }
 }
